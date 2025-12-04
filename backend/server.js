@@ -33,7 +33,8 @@ const __dirname = path.dirname(__filename);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // API Routes
-app.use("/api", userRoutes);
+app.use("/api/auth", userRoutes);
+app.use("/api/users", userRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/menu", menuRoutes);
 app.use("/api/orders", orderRoutes);
@@ -48,6 +49,8 @@ app.use("/api/reports", reportsRoutes);
 // API routes for staff and attendance
 app.use("/api/staff", staffRoutes);
 app.use("/api/attendance", attendanceRoutes);
+//app.use("/api/auth", userRoutes);
+
 
 // Root route
 app.get("/", (req, res) => {

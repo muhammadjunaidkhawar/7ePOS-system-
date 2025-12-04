@@ -17,7 +17,9 @@ const OrderSchema = new mongoose.Schema({
   tip: { type: Number, default: 0 },
   subtotal: { type: Number, default: 0 },
   total: { type: Number, default: 0 },
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
+  //receivedAmount: { type: Number, default: 0 }, // new
+  //totalPaid: { type: Number, default: 0 },      // new
 });
 
 const Order = mongoose.model("Order", OrderSchema);
